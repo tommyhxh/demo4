@@ -1,0 +1,59 @@
+spring:
+  application:
+    name:  hitest2
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://10.16.8.29:3308/mysql-29?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+    driverClassName: com.mysql.jdbc.Driver
+    hikari.maxLifetime: 1765000
+    hikari.maximumPoolSize: 50
+
+server:
+  port: 8089
+
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+  restart:
+    enabled: true
+    sensitive: false
+  trace:
+    enabled: true
+    sensitive: false
+  dump:
+    enabled: true
+    sensitive: false
+  metrics:
+    enabled: true
+    sensitive: false
+  env:
+    enabled: true
+    sensitive: false
+  health:
+    enabled: true
+    sensitive: false
+  logfile:
+    enabled: true
+    sensitive: false
+  configprops:
+    enabled: true
+    sensitive: false
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
+
+swagger:
+  title: test_title
+  version: 1.1.0.RELEASE
+  license: Apache License, Version 2.0
+  licenseUrl: https://www.apache.org/licenses/LICENSE-2.0.html
+  contact.name: tommy
+  contact.email: huangxianhui@hisense.com
+  base-package:  com.hisense.hitest2
+  base-path: /**
+  exclude-path: /error, /ops/**
